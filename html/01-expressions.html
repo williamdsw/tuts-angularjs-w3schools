@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Expressions </title>
+    </head>
+    <body>
+
+        <!-- 'ng-app' = defines angularJS app -->
+        <div ng-app="" ng-init="inputBG='red'; inputColor='white'; quantity=1.2; cost=5;">
+            <p> First Expression: 10 + 13 = {{ 10 +13 }} </p>
+
+            <!-- 'ng-model' = binds the value of input to some variable -->
+            <input type="text" style="background-color: {{inputBG}}; color: {{inputColor}};" ng-model="inputBG">
+
+            <!-- 'ng-bind' = binds a value or expression -->
+            <p> {{ quantity }} * {{ cost }} = <span ng-bind="quantity * cost"></span></p>
+        </div>
+    </body>
+
+    <script src="../js/angular.min.js"></script>
+</html>
