@@ -1,0 +1,9 @@
+
+input#inputEmail { color: white; }
+input#inputEmail.ng-valid { background-color: green; }
+input#inputEmail.ng-dirty { background-color: saddlebrown; }
+input#inputEmail.ng-touched { background-color: blue; }
+
+.valid { color: green; }
+.dirty { color: saddlebrown; }
+.touched { color: blue; }

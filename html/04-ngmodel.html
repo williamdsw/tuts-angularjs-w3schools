@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Directives </title>
+        <link rel="stylesheet" href="../css/04-ngmodel.css">
+    </head>
+    <body>
+
+        <div ng-app="myApp" ng-controller="myController">
+
+            <!-- two way data binding -->
+            Name: <input type="text" ng-model="name">
+            <h1> You entered: {{ name }} </h1>
+
+            <form name="myForm">
+                <input type="email" id="inputEmail" name="myEmail" ng-model="userEmail" required>
+
+                <!-- 'ng-show' = shows if condition is true -->
+                <span ng-show="myForm.myEmail.$error.email" > Not a valid email </span>
+
+                <h3> Status for email: </h3>
+                <p class="valid"> Is valid ? {{ myForm.myEmail.$valid }} </p>
+                <p class="dirty"> Is dirty ? {{ myForm.myEmail.$dirty }} </p>
+                <p class="touched"> Is touched ? {{ myForm.myEmail.$touched }} </p>
+            </form>
+        </div>
+
+        <script src="../libs/angular.min.js"></script>
+        <script src="../js/04-ngmodel.js"></script>
+    </body>
+</html>
