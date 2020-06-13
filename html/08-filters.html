@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Filter </title>
+    </head>
+    <body>
+
+        <div ng-app="app">
+            <div ng-controller="controller">
+                <p> Phrase: <b> {{ phrase }} </b> </p>
+                <p> lowercase: <b> {{ phrase | lowercase }} </b> </p>
+                <p> UPPERCASE: <b> {{ phrase | uppercase }} </b> </p>
+
+                <br>
+                <p> Teams ordered by name: </p>
+                <ul>
+                    <li ng-repeat="team in teams | orderBy: 'name'">
+                        {{ team }}
+                    </li>
+                </ul>
+
+                <br>
+
+                Price: <input type="number" ng-model="price">
+                <p> USS : {{ price | currency }} </p>
+                <p> CAD : {{ price | currency : "CAD" : 4 }} </p>
+
+                <br>
+                <p> Names: </p>
+                <p> {{ names }} </p>
+                <p> Filter: <input type="text" ng-model="textFilter" > </p>
+                <ul>
+                    <li ng-repeat="name in names | filter : textFilter">
+                        {{ name }}
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <script src="../libs/angular.min.js"></script>
+        <script src="../js/08-filters/app.js"></script>
+        <script src="../js/08-filters/controller.js"></script>
+    </body>
+</html>
