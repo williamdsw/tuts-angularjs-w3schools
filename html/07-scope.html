@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Scope </title>
+    </head>
+    <body>
+
+        <div ng-app="app">
+            <div style="background-color: {{ backgroundColor }}; color: {{ color}}">
+                <p> App Background Color = {{ backgroundColor }} </p>
+                <p> App Color = {{ color }} </p>
+
+                <div ng-controller="controller">
+                    <div style="background-color: {{ backgroundColor }}; color: {{ color}}">
+                        <p> Controller Background Color = {{ backgroundColor }} </p>
+                        <p> Controller Color = {{ color }} </p>
+                    </div>
+                </div>
+
+                <p> Something else outside controller... </p>
+            </div>
+            
+        </div>
+
+        <script src="../libs/angular.min.js"></script>
+        <script src="../js/07-scope/app.js"></script>
+        <script src="../js/07-scope/controller.js"></script>
+    </body>
+</html>
