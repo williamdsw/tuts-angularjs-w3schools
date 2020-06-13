@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Http </title>
+    </head>
+    <body>
+
+        <div ng-app="app">
+            <div ng-controller="httpController">
+                <div> 
+                    Click on those buttons to test $http: 
+                    <button type="button" ng-click="getLyrics ();"> Get Lyrics </button>
+                    <button type="button" ng-click="getWrongLyrics ();"> Get Wrong Lyrics </button>
+                </div>
+
+                <hr>
+
+                <div>
+                    <h3> Result </h3>
+                    <p> Status Code: {{ statusCode }} </p>
+                    <p> Status Text: {{ statusText }} </p>
+                    <p> Headers: {{ headers }} </p>
+                    <p> Content: </p>
+                    <p> <pre> {{ content }} </pre>  </p>
+                </div>
+            </div>
+        </div>
+
+        <script src="../libs/angular.min.js"></script>
+        <script src="../js/10-http/app.js"></script>
+        <script src="../js/10-http/controller.js"></script>
+    </body>
+</html>
