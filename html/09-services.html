@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Services </title>
+    </head>
+    <body>
+
+        <div ng-app="app">
+            <div ng-controller="locationController">
+                <p> Current URL: <b> {{ currentUrl }} </b></p>
+            </div>
+
+            <div ng-controller="httpController">
+                <textarea rows="30" cols="60" ng-model="content"></textarea>
+            </div>
+
+            <div ng-controller="intervalController">
+                <p> Counting... <b> {{ currentCounter }} </b></p>
+            </div>
+
+            <div ng-controller="customController">
+                <p> Phrase... <b> {{ content }} </b></p>
+            </div>            
+        </div>
+
+        <script src="../libs/angular.min.js"></script>
+        <script src="../js/09-services/app.js"></script>
+        <script src="../js/09-services/controller.js"></script>
+        <script src="../js/09-services/service.js"></script>
+    </body>
+</html>
