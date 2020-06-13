@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Controller </title>
+    </head>
+    <body>
+
+        <div ng-app="app" ng-controller="myController">
+            <ul>
+                <li ng-repeat="team in teams">
+                    <p> #{{ team.position }} </p>
+                    <p> {{ team.name }} </p>
+                    <p> {{ team.country }} </p>
+                    <hr>
+                </li>
+            </ul>
+        </div>
+
+        <script src="../libs/angular.min.js"></script>
+        <script src="../js/06-controller/app.js"></script>
+        <script src="../js/06-controller/controller.js"></script>
+    </body>
+</html>
