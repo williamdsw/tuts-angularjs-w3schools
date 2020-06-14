@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Events </title>
+        <link rel="stylesheet" href="../css/15-events.css">
+    </head>
+    <body>
+
+        <div ng-app="app">
+            <div ng-controller="eventsController">
+               
+                <h1 ng-mousemove="incrementCount ();"> Mouse on me! </h1>
+                <button type="button" ng-click="incrementCount ();"> Click on me! </button>
+
+                <p> Current Count: {{ count}} </p>
+
+                <div class="box" ng-mousemove="printCoordinates ($event);">
+                    <span> X: {{ x }} - Y: {{ y }} </span>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="../libs/angular.min.js"></script>
+        <script src="../js/15-events/app.js"></script>
+        <script src="../js/15-events/controller.js"></script>
+    </body>
+</html>
