@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> DOM </title>
+    </head>
+    <body>
+
+        <div ng-app="app">
+            <div ng-controller="domController">
+               
+                <input type="checkbox" ng-model="mySwitch"> Click me!
+                <hr>
+                <button type="button" ng-disabled="mySwitch"> {{ mySwitch ? 'Disabled' : 'Enabled' }} </button>
+
+                <p ng-show="mySwitch"> Checkbox is clicked to show me </p>
+                <p ng-show="!mySwitch"> Checkbox is not clicked to show me </p>
+                <p ng-hide="mySwitch"> Checkbox need to be clicked to hide me </p>
+                <p ng-hide="!mySwitch"> Checkbox doesn't need to be clicked to hide me </p>
+
+
+
+            </div>
+        </div>
+
+        <script src="../libs/angular.min.js"></script>
+        <script src="../js/14-dom/app.js"></script>
+        <script src="../js/14-dom/controller.js"></script>
+    </body>
+</html>
