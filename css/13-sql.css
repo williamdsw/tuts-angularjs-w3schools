@@ -1,0 +1,35 @@
+
+button {
+    width: 100px;
+    background-color: steelblue;
+    color: white;
+    font-weight: bolder;
+    padding: 10px;
+    border: 1px dotted blue;
+    box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.23);
+    margin: 0 3px;
+}
+
+/* ---- table ---- */
+
+table, th, td {
+    border: 1px solid forestgreen;
+    border-collapse: collapse;
+    padding: 5px;
+    color: white;
+}
+
+table thead {
+    background-color: seagreen;
+    font-weight: bold;
+    text-align: center;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: green;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: darkolivegreen;  
+}
+
