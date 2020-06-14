@@ -1,0 +1,52 @@
+{
+    "teams": [
+        {
+            "position": 1, 
+            "name": "Manchester City", 
+            "played": 38, 
+            "won": 32, 
+            "draw" : 2, 
+            "lost": 4, 
+            "goalsFor": 95,
+            "goalsAgainst": 23,
+            "goalsDifference": 72,
+            "points": 98
+        },
+        {
+            "position": 2, 
+            "name": "Liverpool", 
+            "played": 38, 
+            "won": 30, 
+            "draw" : 7, 
+            "lost": 1, 
+            "goalsFor": 89,
+            "goalsAgainst": 22,
+            "goalsDifference": 67,
+            "points": 97
+        },
+        {
+            "position": 3, 
+            "name": "Chelsea", 
+            "played": 38, 
+            "won": 21, 
+            "draw" : 9, 
+            "lost": 8, 
+            "goalsFor": 63,
+            "goalsAgainst": 39,
+            "goalsDifference": 24,
+            "points": 72
+        },
+        {
+            "position": 4, 
+            "name": "Tottenham Hotspur", 
+            "played": 38, 
+            "won": 23, 
+            "draw" : 2, 
+            "lost": 13, 
+            "goalsFor": 67,
+            "goalsAgainst": 39,
+            "goalsDifference": 28,
+            "points": 71
+        }
+    ]
+}
