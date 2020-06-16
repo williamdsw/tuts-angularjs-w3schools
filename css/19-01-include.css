@@ -1,0 +1,13 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+table {
+    border: 1px solid white;
+}
+
+table, table td {
+    padding: 5px;
+    text-align: center;
+}

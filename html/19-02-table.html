@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <td> # </td>
+        <td> Name </td>
+        <td> Age </td>
+    </thead>
+    <tbody>
+        <tr ng-repeat="char in characters">
+            <td> {{ $index + 1 }} </td>
+            <td> {{ char.name }} </td>
+            <td> {{ char.age | number }} </td>
+        </tr>
+    </tbody>
+</table>
