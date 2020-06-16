@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Forms </title>
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/16-forms.css">
+    </head>
+    <body>
+
+        <div ng-app="app">
+            <div ng-controller="formController">
+                <form novalidate>
+
+                    <!-- name -->
+                    <div>
+                        <label> Name: </label>
+                        <input type="text" ng-model="form.name">
+                    </div>
+
+                    <!-- age -->
+                    <div>
+                        <label> Age: </label>
+                        <input type="number" ng-model="form.age">
+                    </div>
+
+                    <!-- country -->
+                    <div>
+                        <label> Country: </label>
+                        <select ng-model="form.country">
+                            <option ng-repeat="c in countries" ng-value="c">
+                                {{ c }}
+                            </option>
+                        </select>
+                    </div>
+                    
+                    <!-- car -->
+                    <div>
+                        <label> Do you have a car? </label>
+                        <input type="checkbox" ng-model="form.haveCar">
+                    </div>
+                    
+                    <!-- marital status -->
+                    <div>
+                        <label> Marital Status: </label>
+                        <input type="radio" ng-model="form.maritalStatus" value="single"> Single
+                        <input type="radio" ng-model="form.maritalStatus" value="married"> Married
+                        <input type="radio" ng-model="form.maritalStatus" value="divorced"> Divorced
+                        <input type="radio" ng-model="form.maritalStatus" value="widower"> Widower
+                        <input type="radio" ng-model="form.maritalStatus" value="other"> Other
+                    </div>
+                </form>
+
+                <hr>
+
+                <!-- output -->
+                <pre> {{ form | json }} </pre>
+            </div>
+        </div>
+
+        <script src="../libs/angular.min.js"></script>
+        <script src="../js/16-forms/app.js"></script>
+        <script src="../js/16-forms/controller.js"></script>
+    </body>
+</html>
