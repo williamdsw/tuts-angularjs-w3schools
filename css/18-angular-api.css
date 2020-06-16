@@ -1,0 +1,15 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    width: 200px;
+    height: 32px;
+    padding: 5px;
+    background-color: indigo;
+    color: wheat;
+    font-style: italic;
+}

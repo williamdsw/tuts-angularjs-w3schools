@@ -1,6 +1,6 @@
 
 // adds a controller
-app.controller('formController', function ($scope) {
+app.controller('validationController', function ($scope) {
     name = '';
     age = '';
     country = '';
