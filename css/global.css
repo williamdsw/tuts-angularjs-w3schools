@@ -1,0 +1,19 @@
+
+html, body {
+    height: 100%;
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+body {
+    background-image: linear-gradient(rgb(71, 71, 71), rgb(31, 31, 31));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.ng-scope {
+    margin: 0;
+    padding: 0;
+}
