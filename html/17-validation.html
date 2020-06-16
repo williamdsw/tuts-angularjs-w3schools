@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Validation </title>
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/16-forms.css">
+        <link rel="stylesheet" href="../css/17-validations.css">
+    </head>
+    <body>
+
+        <div ng-app="app">
+            <div ng-controller="formController">
+                <form name="myForm" novalidate>
+
+                    <!-- name -->
+                    <div>
+                        <label> Name: </label>
+                        <input type="text" name="name" ng-model="name" required>
+                        <span class="invalid" ng-show="myForm.name.$touched && myForm.name.$invalid"> This field is required </span>
+                        <span class="valid" ng-show="myForm.name.$touched && myForm.name.$valid"> OK </span>
+                    </div>
+
+                    <!-- age -->
+                    <div>
+                        <label> Age: </label>
+                        <input type="number" name="age" ng-model="age" required>
+                        <span class="invalid" ng-show="myForm.age.$touched && myForm.age.$invalid"> This field is required </span>
+                        <span class="valid" ng-show="myForm.age.$touched && myForm.age.$valid"> OK </span>
+                    </div>
+
+                    <!-- country -->
+                    <div>
+                        <label> Country: </label>
+                        <select name="country" ng-model="country" required>
+                            <option ng-value=""> Choose an option </option>
+                            <option ng-repeat="c in countries" ng-value="c">
+                                {{ c }}
+                            </option>
+                        </select>
+                        <span class="invalid" ng-show="myForm.country.$touched && myForm.country.$invalid"> This field is required </span>
+                        <span class="valid" ng-show="myForm.country.$touched && myForm.country.$valid"> OK </span>
+                    </div>
+                    
+                    <!-- car -->
+                    <div>
+                        <label> Do you have a car? </label>
+                        <input type="checkbox" ng-model="haveCar">
+                    </div>
+                    
+                    <!-- marital status -->
+                    <div>
+                        <label> Marital Status: </label>
+                        <input type="radio" ng-model="maritalStatus" value="single"> Single
+                        <input type="radio" ng-model="maritalStatus" value="married"> Married
+                        <input type="radio" ng-model="maritalStatus" value="divorced"> Divorced
+                        <input type="radio" ng-model="maritalStatus" value="widower"> Widower
+                        <input type="radio" ng-model="maritalStatus" value="other"> Other
+                    </div>
+
+                    <button type="submit" ng-disabled="myForm.$invalid"> Submit </button>
+                </form>
+
+                <hr>
+
+                <!-- output -->
+                <textarea rows="22" cols="50">{{ myForm | json }}</textarea>
+            </div>
+        </div>
+
+        <script src="../libs/angular.min.js"></script>
+        <script src="../js/17-validation/app.js"></script>
+        <script src="../js/17-validation/controller.js"></script>
+    </body>
+</html>

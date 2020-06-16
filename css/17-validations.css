@@ -1,0 +1,33 @@
+span {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+span.invalid {
+    color: indianred;
+}
+
+span.valid {
+    color: chartreuse;
+}
+
+input.ng-touched.ng-invalid, 
+select.ng-touched.ng-invalid {
+    border-color: indianred;
+}
+
+input.ng-touched.ng-valid, 
+select.ng-touched.ng-valid {
+    border-color: chartreuse;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: dodgerblue;
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    padding: 0.5rem;
+    border-color: deepskyblue;
+}
