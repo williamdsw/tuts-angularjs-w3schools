@@ -1,0 +1,35 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+input {
+    width: 20px;
+    height: 20px;
+}
+
+div.animated  {
+    width: 100px;
+    height: 100px;
+    transition: all linear 0.5s;
+    background-color: lightblue;
+}
+
+div.otherAnimated {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+}
+
+div.animated.ng-hide {
+    width: 0;
+    height: 0;
+}
+
+@keyframes changeWidth { from { width: 200px;} to { width: 100px;} }
+@-moz-keyframes changeWidth { from { width: 200px;} to { width: 100px;} }
+@-webkit-keyframes changeWidth { from { width: 200px;} to { width: 100px;} }
+
+div.otherAnimated.ng-hide-animate {
+    animation: 1s changeWidth;
+}

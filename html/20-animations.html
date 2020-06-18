@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Animations </title>
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/20-animations.css">
+    </head>
+    <body>
+        <div ng-app="app">
+
+            <span> Click to hide above: </span>
+            <input type="checkbox" ng-model="toHide">
+            <hr>
+            <div class="animated" ng-hide="toHide"></div>
+            <br><br>
+            <div class="otherAnimated" ng-hide-animate="toHide"></div>
+        </div>
+
+        <script src="../libs/angular.min.js"></script>
+        <script src="../libs/angular-animate.js"></script>
+        <script src="../js/20-animations/app.js"></script>
+        <script src="../js/20-animations/controller.js"></script>
+    </body>
+</html>
